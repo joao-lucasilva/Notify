@@ -1,20 +1,41 @@
 body {
-    background-color: lawngreen;
-    display: grid;
     margin: 0;
+    font-size: 18px;
+    display: grid;
+    font-family: 'Damion', cursive;
+    /* Configura o tamanho das colunas */
+    grid-template-areas: 'header header header header'
+        'section section section section'
+        'batata batata batata batata'
+        'footer footer footer footer'
+        'nav nav nav nav';
+    grid-template-rows: 95vh 50vh 60vh 55vh 10vh;
+    /* grid-template-columns: 24vw 24vw 24vw 24.5vw 24.5vw; */
 }
 
-p {
+/* Nomeação dos itens */
+nav {
+    grid-area: nav;
+    background-color: lightgray;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+nav a {
+    font-size: 20px;
+    text-decoration: none;
     color: grey;
+    margin: 0 10px;
 }
 
 header {
-    display: flex;
-    flex-direction: column;
     grid-area: header;
+    background-color: black;
+    display: flex;
+    justify-content: center;
     background-image: url("assets/banner.png");
-    width: 100%;
-    height: 601px;
+    /* height: 601px; */
 }
 
 header h1 {
@@ -24,72 +45,56 @@ header h1 {
     size: 34pt;
 }
 
-.hand {
+header img {
+    height: 100%;
+    border-radius: 100px;
+}
+
+section {
+    grid-area: section;
+    background-color: white;
+}
+
+section p {
+    display: flex;
+    justify-content: center;
+
+}
+
+section div {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.batata {
+    grid-area: batata;
+    background-color: lightgray;
+}
+
+.batata div {
+    display: flex;
+
+}
+
+.fake p {
     display: flex;
     justify-content: center;
 }
 
-.secao-1 {
-    grid-area: secao1;
-    background-color: white;
-}
-
-.secao-2 {
-    grid-area: secao2;
-    background-color: lightgray;
-}
-
-.secao-3 {
-    grid-area: secao3;
-    background-color: white;
-}
-
-#s1-dv1 {
-    grid-area: s1dv1;
-}
-
-#s1-dv2 {
-    grid-area: s1dv2;
-}
-
-#s1-dv3 {
-    grid-area: s1dv3;
-}
-
-#s2-dv1 {
-    grid-area: s2dv1;
-}
-
-#s2-dv2 {
-    grid-area: s2dv2;
-}
-
-.secao-3 {
-    grid-area: secao3;
-}
-
-#s1-dv1,
-#s1-dv2,
-#s1-dv3,
-#s2-dv1,
-#s2-dv2,
-.secao-3 {
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
-    flex-basis: 0;
-}
-
 footer {
     grid-area: footer;
-    background-color: lightgray;
-
+    background-color: white;
 }
 
-nav a {
-    grid-area: nav;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    color: gray;
+.teste-2 {
+    font-size: 1.2rem;
+}
+
+h2 {
+    font-family: 'Bangers', cursive;
+}
+
+aside iframe {
+    width: 100%;
 }
