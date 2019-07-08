@@ -3,22 +3,19 @@ body {
     font-size: 18px;
     display: grid;
     font-family: 'Damion', cursive;
-    /* Configura o tamanho das colunas */
     grid-template-areas: 'header header header header'
         'section section section section'
         'batata batata batata batata'
         'footer footer footer footer'
         'nav nav nav nav';
-    grid-template-rows: 95vh 50vh 60vh 55vh 10vh;
-    /* grid-template-columns: 24vw 24vw 24vw 24.5vw 24.5vw; */
+    grid-template-rows: 95vh 50vh 60vh 55vh 20vh;
 }
 
-/* Nomeação dos itens */
 nav {
     grid-area: nav;
     background-color: lightgray;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
 }
 
@@ -53,6 +50,11 @@ header img {
 section {
     grid-area: section;
     background-color: white;
+    display: grid;
+    grid-template-areas: 'teste teste teste'
+    'teste-2 teste-2 teste-2'
+    'teste-3 teste-3 teste-3';
+    grid-template-rows: 30vh 30vh 30vh;
 }
 
 section p {
@@ -64,28 +66,70 @@ section p {
 section div {
     display: flex;
     justify-content: space-between;
+    float: left;
 
 }
-
+section h3{
+    justify-content: center;
+    align-items: center;
+}
 .batata {
     grid-area: batata;
     background-color: lightgray;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
 }
 
 .batata div {
     display: flex;
-
 }
 
+.batata div input, button{
+    border-radius: 20px;
+}
+.batata div button{
+    background-color: green;
+}
 .fake p {
     display: flex;
     justify-content: center;
+    color: gray;
+    text-align: justify;
 }
 
 footer {
     grid-area: footer;
     background-color: white;
+    justify-content: center;
+    align-items: center;
 }
+
+footer p {
+    display: flex;
+    justify-content: center;
+    color: gray;
+}
+
+footer h3 {
+    display: flex;
+    justify-content: center;
+}
+
+footer img {
+    display: flex;
+    justify-content: center;
+}
+
+.people {
+    background-image: url("assets/pessoa1.jpg");
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 55.5%;
+    height: 14%;
+}
+
 
 .teste-2 {
     font-size: 1.2rem;
