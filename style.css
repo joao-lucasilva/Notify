@@ -1,0 +1,95 @@
+body {
+    background-color: lawngreen;
+    display: grid;
+    margin: 0;
+}
+
+p {
+    color: grey;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    grid-area: header;
+    background-image: url("assets/banner.png");
+    width: 100%;
+    height: 601px;
+}
+
+header h1 {
+    font-family: 'Pacifico',
+        cursive;
+    color: white;
+    size: 34pt;
+}
+
+.hand {
+    display: flex;
+    justify-content: center;
+}
+
+.secao-1 {
+    grid-area: secao1;
+    background-color: white;
+}
+
+.secao-2 {
+    grid-area: secao2;
+    background-color: lightgray;
+}
+
+.secao-3 {
+    grid-area: secao3;
+    background-color: white;
+}
+
+#s1-dv1 {
+    grid-area: s1dv1;
+}
+
+#s1-dv2 {
+    grid-area: s1dv2;
+}
+
+#s1-dv3 {
+    grid-area: s1dv3;
+}
+
+#s2-dv1 {
+    grid-area: s2dv1;
+}
+
+#s2-dv2 {
+    grid-area: s2dv2;
+}
+
+.secao-3 {
+    grid-area: secao3;
+}
+
+#s1-dv1,
+#s1-dv2,
+#s1-dv3,
+#s2-dv1,
+#s2-dv2,
+.secao-3 {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    flex-basis: 0;
+}
+
+footer {
+    grid-area: footer;
+    background-color: lightgray;
+
+}
+
+nav a {
+    grid-area: nav;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: gray;
+}
